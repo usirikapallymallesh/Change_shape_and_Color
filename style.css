@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to top, yellow, red, rgb(173, 173, 255));
+}
+.container {
+  height: 400px;
+  width: 300px;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.container:hover {
+  box-shadow: 10px 10px 30px black;
+}
+.container > .color-container {
+  height: 250px;
+  width: 250px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.shape {
+  height: 140px;
+  width: 140px;
+  background-color: white;
+  border-radius: 50%;
+  animation: shake 2s ease 0.1s 2;
+}
+.container > button {
+  width: 200px;
+  margin: 2px;
+  border-radius: 10px;
+  padding: 12px 30px;
+  color: white;
+  background-color: blue;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+}
+.container > button:hover {
+  border-color: white;
+  background-color: transparent;
+  color: black;
+  box-shadow: 2px 2px 2px black;
+  transition: all 0.2s ease-in-out;
+}
+.rectangle {
+  height: 110px;
+  width: 160px;
+  background-color: white;
+  animation: shake 2s ease 0.1s 2;
+}
+.diamond {
+  height: 120px;
+  width: 120px;
+  transform: rotate(45deg);
+  background-color: white;
+  animation: shake 2s ease 0.1s 2;
+}
+.square {
+  height: 120px;
+  width: 120px;
+  background-color: white;
+  animation: shake 2s ease 0.1s 2;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+}
+.triangle {
+  border-bottom: 136px solid #fff;
+  border-right: 92px solid transparent;
+  border-left: 92px solid transparent;
+  animation: shake 2s ease 0.1s 2;
+}
